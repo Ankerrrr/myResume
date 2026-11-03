@@ -1,0 +1,182 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[default]{lato}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{fontawesome}
+\usepackage{enumitem}
+% Clickable contacts using the existing pdfLaTeX engine.
+\newcommand{\contactlink}[2]{%
+    \leavevmode\pdfstartlink attr{/Border [0 0 0]}%
+    user{/Subtype /Link /A << /S /URI /URI (#1) >>}%
+    #2\pdfendlink%
+}
+\DeclareFontFamily{U}{fontawesomeOne}{}
+\DeclareFontShape{U}{fontawesomeOne}{m}{n}
+{<-> FontAwesome--fontawesomeone}{}
+\DeclareRobustCommand\FAone{\fontencoding{U}\fontfamily{fontawesomeOne}\selectfont}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+\setlist[itemize]{topsep=3pt,itemsep=0pt,parsep=0pt,partopsep=0pt}
+\newcommand{\resumesection}[1]{%
+    \par\vspace{2pt}\hrule\vspace{2pt}%
+    {\noindent\large\bfseries #1\par}\vspace{1pt}%
+}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+{\setlength{\leftmargin}{#1}}%
+     \item[]
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+{\setlength{\leftmargin}{-0.5#1}}%
+\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+#1 &
+#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+	{\LARGE \textbf{Anke Huang}}\\
+	{\small New Taipei City, Taiwan \quad\textbf{Availability:} Every day of the week; flexible scheduling.}
+	\vspace{0.05cm}
+	\\
+	{\fontsize{8.5}{11}\selectfont
+	\begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}lll@{}}
+		\raisebox{-0.2\height}{\normalsize \faPhoneSquare}\enspace 0909-179-797 &
+		\raisebox{-0.2\height}{\normalsize \faEnvelopeSquare}\enspace Keranmail@protonmail.com &
+		\contactlink{https://github.com/Ankerrrr}{\raisebox{-0.2\height}{\normalsize \faGithubSquare}\enspace github.com/Ankerrrr} &
+		\contactlink{https://www.linkedin.com/in/an-ke-8ba767217/}{\raisebox{-0.2\height}{\normalsize \faLinkedinSquare}\enspace linkedin.com/in/an-ke-8ba767217}
+	\end{tabular*}}
+\end{center}
+\vspace{-\topsep}
+
+\resumesection{Education}
+\begin{itemize}[leftmargin=1em]
+    \parskip=0.1em
+        
+    \item
+          \headerrow
+          {\textbf{National Formosa University}}
+          {\textbf{Huwei Township, Yunlin County, Taiwan}}
+          \headerrow
+          {\emph{B.S. Computer Science} (\textbf{GPA:} 3.3/4.00)}
+          {\emph{2023 -- May 2027 (Expected)}}
+          \begin{itemize*}
+              \item Focus on system development, AI, and embedded applications; hands-on programming, system integration, and software development experience.
+          \end{itemize*}
+
+    \item
+          \headerrow
+          {\textbf{National Pingtung Industrial Vocational High School}}
+          {\textbf{Pingtung City, Taiwan}}
+          \headerrow
+          {\emph{Department of Electrical Engineering}}
+          {\emph{September 2020 -- June 2023}}
+                    
+\end{itemize}
+
+\resumesection{Experience}
+
+\renewcommand\labelitemi{}
+\renewcommand\labelitemii{$\bullet$}
+\begin{itemize}[leftmargin=1em]
+	\parskip=0.1em
+    
+    
+	\item
+	      \headerrow
+	      {\textbf{Panasonic ToughBook}}
+	      {\textbf{Zhonghe District, New Taipei City, Taiwan}}
+	      \headerrow
+	      {\emph{IT Intern}}
+	      {\emph{July 2026 -- Present (Expected end: February 2027)}}
+	      \begin{itemize*}
+	      	\item Technologies: VB, .NET, C\#, and C++.
+	      	\item Developed factory acceptance test scripts for rugged computers.
+	      	\item Maintained factory visualization software and internal web applications.
+	      	\item Developed enterprise internal systems, including a corporate portal, information retrieval system, and employee authorization and resume review system.
+	      \end{itemize*}
+
+    \item
+          \headerrow
+          {\textbf{Python Programming Teaching Assistant}}
+          {\emph{September 2025 -- February 2026}}
+          \\{\emph{National Formosa University -- Python Programming Course}}
+          \begin{itemize*}
+              \item Graded Python assignments, answered course questions, and guided students through debugging to strengthen their understanding of programming concepts and problem-solving logic.
+              \item Developed teaching, communication, and problem-analysis skills through student support.
+          \end{itemize*}
+\end{itemize}
+
+\resumesection{Graduation Projects}
+\begin{itemize}[leftmargin=1em,noitemsep]
+    \item \textbf{AI-Powered Smart Baby Rocker}
+    \\Integrated AI cry recognition, safety sensors, and Wi-Fi/IoT for automatic soothing, remote monitoring, and mobile alerts. Contributed MCU firmware, sensor I/O, networking, circuit design/engraving, enclosure fabrication, and AI model training/tuning.
+    \\{\small\textbf{Awards:} Bronze Medal, 20th Holtek Creative Competition; Bronze Medal, 2025 Andes Cup; Honorable Mention, 2026 On-Campus Project Exhibition and Competition.}
+    \item \textbf{AI-Based Campus Conflict and Violence Detection}
+    \\Uses computer vision to analyze live camera feeds, detect potential violence such as pushing, hitting, and pulling, and generate alerts for timely response.
+\end{itemize}
+
+\resumesection{Skills}
+
+\hyphenpenalty=1000
+\begin{itemize}[leftmargin=1em,noitemsep]
+	\item \textbf{Languages:}
+	      C++, C, HTML/CSS, Java, JavaScript, Python, SQL
+	\item \textbf{Frameworks \& Libraries:}
+	      Django, OpenCV, React, TensorFlow
+	\item \textbf{Databases \& Tools:}
+	      MySQL, SQL Server Management Studio, Git, Linux, Node.js, Visual Studio, VS Code
+\end{itemize}
+
+\resumesection{English Proficiency Tests}
+
+\begin{itemize}[leftmargin=1em,noitemsep]
+    \item \textbf{TOEIC:} 710 (September 2026) \hspace{2em} \textbf{DET:} 90 (September 2026)
+\end{itemize}
+
+\resumesection{Languages}
+
+\begin{itemize}[leftmargin=1em,noitemsep]
+    \item \textbf{English:} Intermediate \hspace{1.5em} \textbf{Japanese:} Beginner
+    \item \textbf{Mandarin Chinese:} Native \hspace{1.5em} \textbf{Taiwanese Hokkien:} Native
+\end{itemize}
+
+
+\resumesection{Professional Certifications}
+\begin{itemize}[leftmargin=1em,noitemsep]
+    \item Class C Technician Certificate in Indoor Wiring
+    \item Class C Technician Certificate in Industrial Wiring
+    \item Class 2 Amateur Radio Operator License
+    \item TQC Linux System Administration -- Professional Level
+    \item Red Cross First Aider Certification
+\end{itemize}
+
+\resumesection{Programming Competitions}
+\begin{itemize}[leftmargin=1em,noitemsep]
+    \item 2026 ICPC-TOPC -- Honorable Mention
+    \item Formosa Programming Contest -- Honorable Mention
+\end{itemize}
+
+\end{document}

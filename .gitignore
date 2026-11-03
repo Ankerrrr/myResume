@@ -1,0 +1,13 @@
+# LaTeX build files
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.out
+*.toc
+
+# Local previews and older PDF outputs
+/tmp/
+/resume.pdf
+/resume_updated.pdf
