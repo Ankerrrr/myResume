@@ -7,7 +7,5 @@
 *.out
 *.toc
 
-# Local previews and older PDF outputs
+# Local previews
 /tmp/
-/resume.pdf
-/resume_updated.pdf
